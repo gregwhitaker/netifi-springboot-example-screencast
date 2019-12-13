@@ -1,5 +1,4 @@
-rootProject.name = 'netifi-quickstart-video1'
+rootProject.name = 'netifi-springboot-example-screencast'
 include 'hello-service'
 include 'hello-service-idl'
 include 'hello-client'
-
