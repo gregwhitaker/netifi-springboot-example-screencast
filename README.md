@@ -15,8 +15,9 @@ Run the following command to build the example:
 ## Running the Example
 Follow the steps below to run the example:
 
-1. Ensure you have a running Netifi Broker. If not, run the following command in this project directory to start a new broker:
+1. Ensure you have a running Netifi Broker. If not, run the following commands to start a new broker:
 
+        cd docker
         docker-compose up
         
 2. In a new terminal, run the following command to start the `hello-service`:
