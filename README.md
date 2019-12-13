@@ -8,7 +8,10 @@ project.
 If you get stuck the `solution` branch contains the final code.
 
 ## Bugs and Feedback
-For bugs, questions, and discussions please use the [Github Issues](https://github.com/netifi/netifi-quickstart-video1/issues).
+For bugs, questions, and discussions please use the [Github Issues](https://github.com/gregwhitaker/netifi-springboot-example-screencast/issues).
+
+## Support
+Support for Netifi and RSocket is available on the [Netifi Community Forums](https://community.netifi.com).
 
 ## License
 Copyright 2019 Netifi Inc.
