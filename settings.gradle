@@ -1,0 +1,5 @@
+rootProject.name = 'netifi-quickstart-video1'
+include 'hello-service'
+include 'hello-service-idl'
+include 'hello-client'
+

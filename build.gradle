@@ -1,0 +1,45 @@
+plugins {
+    id "org.springframework.boot" version "2.1.5.RELEASE" apply false
+    id "io.spring.dependency-management" version "1.0.8.RELEASE" apply false
+    id "com.google.protobuf" version "0.8.10" apply false
+}
+
+allprojects {
+    group = 'com.netifi.quickstarts'
+    version = '0.1.0'
+
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+
+    ext {
+        // Dependency Versions
+        netifiBomVersion = '1.6.10'
+        protobufVersion = '3.6.1'
+        rsocketVersion = '0.12.2-RC4'
+        rsocketRpcVersion = '0.2.18'
+        log4j2Version = '2.11.2'
+    }
+}
+
+subprojects {
+    apply plugin: "io.spring.dependency-management"
+
+    dependencyManagement {
+        imports {
+            mavenBom "com.netifi:netifi-bom:${netifiBomVersion}"
+            mavenBom "org.apache.logging.log4j:log4j-bom:${log4j2Version}"
+        }
+
+        dependencies {
+            dependency "com.netifi:netifi-spring-boot-starter:${netifiBomVersion}"
+            dependency "com.google.protobuf:protobuf-java:${protobufVersion}"
+            dependency "com.google.protobuf:protoc:${protobufVersion}"
+            dependency "io.rsocket:rsocket-core:${rsocketVersion}"
+            dependency "io.rsocket:rsocket-transport-netty:${rsocketVersion}"
+            dependency "io.rsocket.rpc:rsocket-rpc-protobuf:${rsocketRpcVersion}"
+            dependency "io.rsocket.rpc:rsocket-rpc-core:${rsocketRpcVersion}"
+        }
+    }
+}
