@@ -5,6 +5,8 @@ plugins {
 }
 
 allprojects {
+    apply plugin: "idea"
+
     group = 'com.netifi.quickstarts'
     version = '0.1.0'
 
