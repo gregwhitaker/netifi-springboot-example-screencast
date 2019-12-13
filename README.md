@@ -1,5 +1,11 @@
-# netifi-quickstart-video1
-Example code for the Getting Started with Netifi video.
+# netifi-springboot-example-screencast
+Example code for the Getting Started with Netifi and Spring Boot screencast.
+
+## Instructions
+This is the blank template that was used to start the project in the video. Follow along and add code to complete the
+project. 
+
+If you get stuck the `solution` branch contains the final code.
 
 ## Bugs and Feedback
 For bugs, questions, and discussions please use the [Github Issues](https://github.com/netifi/netifi-quickstart-video1/issues).
