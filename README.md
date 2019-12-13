@@ -7,6 +7,14 @@ project.
 
 If you get stuck, the `solution` branch contains the final code.
 
+## Project Structure
+This example contains the following interesting projects / directories:
+
+- [docker](docker) - Docker Compose configuration for running a Netifi Broker.
+- [hello-client](hello-client) - RSocket client that calls the `hello-service` and requests a hello.
+- [hello-service](hello-service) - RSocket service that returns hello messages.
+- [hello-service-idl](hello-service-idl) - Protobuf contract that defines the API of the `hello-service` and is used to generate both the service and client code.
+
 ## Building the Example
 Run the following command to build the example:
 
