@@ -7,6 +7,26 @@ project.
 
 If you get stuck the `solution` branch contains the final code.
 
+## Building the Example
+Run the following command to build the example:
+
+    ./gradlew clean build
+    
+## Running the Example
+Follow the steps below to run the example:
+
+1. Ensure you have a running Netifi Broker. If not, run the following command in this project directory to start a new broker:
+
+        docker-compose up
+        
+2. In a new terminal, run the following command to start the `hello-service`:
+
+        ./gradlew :hello-service:bootRun
+        
+3. In a new terminal, run the following command to start the `hello-client` and send a request to the `hello-service`:
+
+        ./gradlew :hello-client:bootRun
+
 ## Bugs and Feedback
 For bugs, questions, and discussions please use the [Github Issues](https://github.com/gregwhitaker/netifi-springboot-example-screencast/issues).
 
