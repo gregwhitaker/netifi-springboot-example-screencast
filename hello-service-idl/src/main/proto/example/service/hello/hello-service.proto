@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package example.service.hello;
+
+option java_package = "example.service.hello.protobuf";
+option java_outer_classname = "HelloServiceProto";
+option java_multiple_files = true;
+
+service HelloService {
+
+    // Returns a hello message
+    rpc GetLetters (HelloRequest) returns (HelloResponse) {}
+}
+
+message HelloRequest {
+    string name = 1;
+}
+
+message HelloResponse {
+    string message = 1;
+}
