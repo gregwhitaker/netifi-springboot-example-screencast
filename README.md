@@ -5,7 +5,7 @@ Example code for the Getting Started with Netifi and Spring Boot screencast.
 This is the blank template that was used to start the project in the video. Follow along and add code to complete the
 project. 
 
-If you get stuck the `solution` branch contains the final code.
+If you get stuck, the `solution` branch contains the final code.
 
 ## Building the Example
 Run the following command to build the example:
