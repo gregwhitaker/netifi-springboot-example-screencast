@@ -9,7 +9,7 @@ option java_multiple_files = true;
 service HelloService {
 
     // Returns a hello message
-    rpc GetLetters (HelloRequest) returns (HelloResponse) {}
+    rpc GetHelloMessage (HelloRequest) returns (HelloResponse) {}
 }
 
 message HelloRequest {
