@@ -5,6 +5,8 @@ plugins {
 }
 
 allprojects {
+    apply plugin: "idea"
+
     group = 'com.netifi.quickstarts'
     version = '0.1.0'
 
@@ -15,7 +17,7 @@ allprojects {
 
     ext {
         // Dependency Versions
-        netifiBomVersion = '1.6.10'
+        netifiBomVersion = '1.6.9'
         protobufVersion = '3.6.1'
         rsocketVersion = '0.12.2-RC4'
         rsocketRpcVersion = '0.2.18'
