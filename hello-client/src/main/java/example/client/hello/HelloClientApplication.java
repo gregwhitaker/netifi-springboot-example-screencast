@@ -10,8 +10,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Component;
 
-import java.util.concurrent.CountDownLatch;
-
 @SpringBootApplication
 public class HelloClientApplication {
     private static final Logger LOG = LoggerFactory.getLogger(HelloClientApplication.class);
@@ -31,11 +29,10 @@ public class HelloClientApplication {
 
         @Override
         public void run(String... args) throws Exception {
-            String name = getNameFromArgs(args);
 
             // Create the request to send to the service
             HelloRequest request = HelloRequest.newBuilder()
-                    .setName(name)
+                    .setName("World")
                     .build();
 
             // Call the service
@@ -43,14 +40,6 @@ public class HelloClientApplication {
                     .subscribe(helloResponse -> {
                         LOG.info("Response: {}", helloResponse.getMessage());
                     });
-        }
-
-        private String getNameFromArgs(String... args) {
-            if (args == null || args.length <= 0) {
-                return "You";
-            } else {
-                return args[0];
-            }
         }
     }
 }
