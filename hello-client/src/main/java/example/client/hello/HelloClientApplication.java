@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.stereotype.Component;
 
 import java.util.concurrent.CountDownLatch;
 
@@ -22,6 +23,7 @@ public class HelloClientApplication {
     /**
      * Runs the client.
      */
+    @Component
     public class Runner implements CommandLineRunner {
 
         @Group(value = "example.service.hello")
@@ -36,17 +38,11 @@ public class HelloClientApplication {
                     .setName(name)
                     .build();
 
-            CountDownLatch latch = new CountDownLatch(1);
-
             // Call the service
             helloServiceClient.getHelloMessage(request)
                     .subscribe(helloResponse -> {
                         LOG.info("Response: {}", helloResponse.getMessage());
-                        latch.countDown();
                     });
-
-            // Wait for the async response
-            latch.await();
         }
 
         private String getNameFromArgs(String... args) {
