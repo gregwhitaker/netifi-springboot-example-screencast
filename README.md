@@ -1,5 +1,5 @@
 # netifi-springboot-example-screencast
-Example code for the Getting Started with Netifi and Spring Boot screencast.
+Example code for the [Getting Started with Netifi and Spring Boot screencast](https://www.youtube.com/watch?v=rKf1SVR9hwA).
 
 ## Instructions
 This is the blank template that was used to start the project in the video. Follow along and add code to complete the
